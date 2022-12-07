@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>bigData6JspStudy</display-name>
+  <!-- dd배포 서술자는 서버에서 가장 중요한 요소이기 떄문에 오류가 있으면 서버가 켜지지 않는다. -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>empDetail</servlet-name>
+  	<servlet-class>com.jsp.study.servlet.L02EmpDetail</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>empList</servlet-name>
+  	<servlet-class>com.jsp.study.servlet.L01EmpList</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>deptList</servlet-name>
+  	<servlet-class>com.jsp.study.servlet.MydeptList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>empList</servlet-name>
+  	<url-pattern>/emp/list.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>empDetail</servlet-name>
+  	<url-pattern>/emp/detail.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>deptList</servlet-name>
+  	<url-pattern>/dept/list.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
